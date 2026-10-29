@@ -1,0 +1,19 @@
+<div class="container my-4">
+    <h2 class="mb-4">Barras de progreso</h2>
+
+    <p class="mb-1">Básica (value y color)</p>
+    <app-custom-progress-bar [value]="25" color="primary"></app-custom-progress-bar>
+
+    <p class="mt-4 mb-1">Otro color</p>
+    <app-custom-progress-bar [value]="60" color="success"></app-custom-progress-bar>
+
+    <p class="mt-4 mb-1">Con porcentaje</p>
+    <app-custom-progress-bar [value]="75" color="info" [showLabel]="true"></app-custom-progress-bar>
+
+    <p class="mt-4 mb-1">Striped</p>
+    <app-custom-progress-bar [value]="50" color="warning" [striped]="true"></app-custom-progress-bar>
+
+    <p class="mt-4 mb-1">Striped animada, más alta y con porcentaje</p>
+    <app-custom-progress-bar [value]="90" color="danger" [striped]="true" [animated]="true" [showLabel]="true"
+        [height]="30"></app-custom-progress-bar>
+</div>

@@ -1,0 +1,8 @@
+<div class="progress" role="progressbar" [attr.aria-valuenow]="getValue()" aria-valuemin="0" aria-valuemax="100"
+    [style.height.px]="height()">
+    <div [class]="getClasses()" [style.width.%]="getValue()">
+        @if (showLabel()) {
+            {{ getValue() }}%
+        }
+    </div>
+</div>
