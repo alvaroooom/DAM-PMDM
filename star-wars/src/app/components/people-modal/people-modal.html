@@ -1,0 +1,25 @@
+<div class="modal-header">
+    <h4 class="modal-title">Hi there!</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss()"></button>
+</div>
+<div class="modal-body">
+    <p>Character: {{ peopleDetail?.name }}!</p>
+    <p>Height: {{ peopleDetail?.height }} cm</p>
+    <p>Mass: {{ peopleDetail?.mass }} kg</p>
+    <p>Gender: {{ peopleDetail?.gender }}</p>
+    <p>Birth year: {{ peopleDetail?.birth_year }}</p>
+    <!-- condiciones @if: solo muestro los datos de color cuando Swapi nos devuelve un valor real,
+     si el valor es "n/a" oculto esa línea del modal -->
+    @if (peopleDetail?.hair_color !== 'n/a') {
+    <p>Hair color: {{ peopleDetail?.hair_color }}</p>
+    }
+    @if (peopleDetail?.skin_color !== 'n/a') {
+    <p>Skin color: {{ peopleDetail?.skin_color }}</p>
+    }
+    @if (peopleDetail?.eye_color !== 'n/a') {
+    <p>Eye color: {{ peopleDetail?.eye_color }}</p>
+    }
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-secondary" (click)="activeModal.close()">Close</button>
+</div>

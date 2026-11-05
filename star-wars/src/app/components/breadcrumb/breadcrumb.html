@@ -1,0 +1,10 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        @if (label(); as current) {
+        <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{ current }}</li>
+        } @else {
+        <li class="breadcrumb-item active" aria-current="page">Home</li>
+        }
+    </ol>
+</nav>
